@@ -1,1 +1,0 @@
-Hier befindet sich die Lösung zur Übung 1

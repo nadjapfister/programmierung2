@@ -1,5 +1,6 @@
 from os import abort
 import numpy as np
+import random
 
 #np.array(L)
 
@@ -23,3 +24,5 @@ print(e)
 np.pi * a
 
 np.random.random(10)*100
+
+plt.show()

@@ -1,9 +1,29 @@
-n = 2000
-X = np.random.normal(0, 1 ,n)
-Y = np.random.normal(0, 1, n)
+from math import exp
+import numpy as np
+import matplotlib.pyplot as plt
+import random
 
-# die 2000 Punkte sollen nach ihrem Abstand zu (0,0) eingefärbt werden
-D = np.sqrt(X**2 + Y**2)
 
-plt.scatter(X, Y, c = -D)
-plt.show()
+def f(x,y):
+    return (np.exp(-x**2)*np.sin(y))
+    
+n = 256
+x = np.linspace(-10, 10, n)
+y = np.linspace(-10, 10, n)
+X, Y = np.meshgrid(x, y)
+
+fig7 = plt.figure()
+pp7 = fig7.add_subplot(111)
+plt.title("Aufgabe 2.1 - Nadja Pfister")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.axis("equal")
+
+img = pp7.contourf(X, Y, f(X,Y), 12, cmap='winter') 
+fig7.show()
+
+fig71  = plt.figure()
+plot71 = fig71.add_subplot(111, projection='3d')
+plt.title("Aufgabe 2.2 - Nadja Pfister")
+plot71.plot_surface(X, Y, f(X,Y), cmap='winter')
+fig71.show()

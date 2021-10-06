@@ -1,16 +1,10 @@
 import punkt
 
 a = punkt.Punkt2D() #Instanz
-b = punkt.Punkt2D() #Instanz
+b = punkt.Punkt2D(5,6) #Instanz
 
-a.x = 0
-a.y = 0
-
-b.x = 1.0
-b.y = 1.0
-
-#a.ausgabe()
-#b.ausgabe()
+a.ausgabe(True)
+b.ausgabe(False)
 
 d1 = a.distanz(b)
 d2 = b.distanz(a)
